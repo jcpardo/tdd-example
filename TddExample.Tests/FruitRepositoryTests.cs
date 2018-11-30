@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using Xunit;
 
 namespace TddExample.Tests
@@ -16,7 +17,10 @@ namespace TddExample.Tests
                 GeoDistribution = "Temperate"
             };
 
-            Assert.Equal(expectedResult, result);
+            var resultSerializedObject = JsonConvert.SerializeObject(result);
+            var expectedResultSerializedObject = JsonConvert.SerializeObject(expectedResult);
+
+            Assert.Equal(expectedResultSerializedObject, resultSerializedObject);
         }
     }
 }
