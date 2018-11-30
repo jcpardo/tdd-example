@@ -25,10 +25,24 @@ namespace TddExample.Tests
         }
 
         [Fact]
+        public void GetFruitWithLessCalories_GivenCaloriesAmount_ReturnsNull()
+        {
+            var result = FruitRepository.GetFruitWithLessCalories(10);
+            Assert.Null(result);
+        }
+
+        [Fact]
         public void ExistFruit_GivenFruitName_ReturnsFalse()
         {
             var result = FruitRepository.ExistFruit("Mango");
             Assert.False(result);
+        }
+
+        [Fact]
+        public void ExistFruit_GivenFruitName_ReturnsTrue()
+        {
+            var result = FruitRepository.ExistFruit("Apple");
+            Assert.True(result);
         }
 
         [Fact]

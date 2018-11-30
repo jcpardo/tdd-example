@@ -19,7 +19,7 @@ namespace TddExample
 
         public static Fruit GetFruitWithLessCalories(int calories)
         {
-            return fruitList.First(x => x.Calories < calories);
+            return fruitList.FirstOrDefault(x => x.Calories < calories);
         }
 
         public static bool ExistFruit(string name)
@@ -42,6 +42,7 @@ namespace TddExample
             }
 
             return 0;
+            
         }
     } 
 }
