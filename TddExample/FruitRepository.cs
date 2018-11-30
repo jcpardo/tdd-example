@@ -24,7 +24,7 @@ namespace TddExample
 
         public static bool ExistFruit(string name)
         {
-            return false;
+            return fruitList.Any(x => x.Name == name);
         }
-    }
+    } 
 }
