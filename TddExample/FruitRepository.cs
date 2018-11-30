@@ -34,7 +34,8 @@ namespace TddExample
 
         public static int GetCaloriesAmount(string fruitName, int amountGrams)
         {
-            return 182;
+            var fruit = fruitList.FirstOrDefault(x => x.Name == fruitName);
+            return fruit.Calories * amountGrams / fruit.GramsPer;
         }
     } 
 }
