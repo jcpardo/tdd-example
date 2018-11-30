@@ -66,7 +66,7 @@ namespace TddExample.Tests
         [Fact]
         public void GetCaloriesAmount_GivenFruitAndAmount_ReturnsZero()
         {
-            var result = FruitRepository.GetCaloriesAmount("Apple", 350); //Apple 52cal/100g --> (52 x 350) / 100 = 182
+            var result = FruitRepository.GetCaloriesAmount("Mango", 350); //Mango is not in the fruit list
             var expectedResult = 0;
             Assert.Equal(expectedResult, result);
         }

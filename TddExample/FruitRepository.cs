@@ -35,7 +35,13 @@ namespace TddExample
         public static int GetCaloriesAmount(string fruitName, int amountGrams)
         {
             var fruit = fruitList.FirstOrDefault(x => x.Name == fruitName);
-            return fruit.Calories * amountGrams / fruit.GramsPer;
+
+            if (fruit != null)
+            {
+                return fruit.Calories * amountGrams / fruit.GramsPer;
+            }
+
+            return 0;
         }
     } 
 }
