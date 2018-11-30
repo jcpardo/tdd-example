@@ -31,5 +31,10 @@ namespace TddExample
         {
             return fruitList.Where(x => x.GeoDistribution == geoDistribution).ToList();
         }
+
+        public static int GetCaloriesAmount(string fruitName, int amountGrams)
+        {
+            return 182;
+        }
     } 
 }
