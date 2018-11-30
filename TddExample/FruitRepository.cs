@@ -21,5 +21,10 @@ namespace TddExample
         {
             return fruitList.First(x => x.Calories < calories);
         }
+
+        public static bool ExistFruit(string name)
+        {
+            return false;
+        }
     }
 }
