@@ -34,7 +34,7 @@ namespace TddExample.Tests
         [Fact]
         public void GetFruits_GivenGeoDistribution_ReturnsFruitList()
         {
-            var result = GetFruitsByGeoDistribution("Tropical");
+            var result = FruitRepository.GetFruitsByGeoDistribution("Tropical");
 
             var expectedResult = new List<Fruit>
             {
@@ -51,7 +51,7 @@ namespace TddExample.Tests
         [Fact]
         public void GetFruits_GivenGeoDistribution_ReturnsNull()
         {
-            var result = GetFruitsByGeoDistribution("Wrong GeoDistribution");
+            var result = FruitRepository.GetFruitsByGeoDistribution("Wrong GeoDistribution");
             Assert.Null(result);
         }
     }

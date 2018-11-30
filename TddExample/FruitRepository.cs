@@ -26,5 +26,11 @@ namespace TddExample
         {
             return fruitList.Any(x => x.Name == name);
         }
+
+        public static List<Fruit> GetFruitsByGeoDistribution(string geoDistribution)
+        {
+            var result = fruitList.Where(x => x.GeoDistribution == geoDistribution).ToList();
+            return result.Any() ? result : null;
+        }
     } 
 }
