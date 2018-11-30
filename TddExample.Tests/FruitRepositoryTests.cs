@@ -13,7 +13,7 @@ namespace TddExample.Tests
                 Name = "Peach",
                 Calories = 39,
                 GramsPer = 100,
-                geoDistribution = "Temperate"
+                GeoDistribution = "Temperate"
             };
 
             Assert.Equal(expectedResult, result);
