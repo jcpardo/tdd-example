@@ -49,10 +49,11 @@ namespace TddExample.Tests
         }
 
         [Fact]
-        public void GetFruits_GivenGeoDistribution_ReturnsNull()
+        public void GetFruits_GivenGeoDistribution_ReturnsEmpty()
         {
             var result = FruitRepository.GetFruitsByGeoDistribution("Wrong GeoDistribution");
-            Assert.Null(result);
+            Assert.Empty(result);
         }
-    }
+
+     }
 }
