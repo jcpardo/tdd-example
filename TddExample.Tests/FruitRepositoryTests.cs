@@ -22,5 +22,12 @@ namespace TddExample.Tests
 
             Assert.Equal(expectedResultSerializedObject, resultSerializedObject);
         }
+
+        [Fact]
+        public void ExistFruit_GivenFruitName_ReturnsFalse()
+        {
+            var result = FruitRepository.ExistFruit("Mango");
+            Assert.False(result);
+        }
     }
 }
