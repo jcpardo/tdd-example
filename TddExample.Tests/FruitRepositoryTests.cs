@@ -55,5 +55,12 @@ namespace TddExample.Tests
             Assert.Empty(result);
         }
 
-     }
+        public void GetCaloriesAmount_GivenFruitAndAmount()
+        {
+            var result = FruitRepository.GetCaloriesAmount("Apple", 350); //Apple 52cal/100g --> (52 x 350) / 100 = 182
+            var expectedResult = 182;
+            Assert.Equal(expectedResult, result);
+        }
+
+    }
 }
